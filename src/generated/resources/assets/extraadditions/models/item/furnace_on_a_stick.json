@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/handheld",
+  "textures": {
+    "layer0": "extraadditions:item/furnace_on_a_stick"
+  }
+}
