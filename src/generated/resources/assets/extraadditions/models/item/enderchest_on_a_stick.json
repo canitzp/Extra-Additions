@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/handheld",
+  "textures": {
+    "layer0": "extraadditions:item/enderchest_on_a_stick"
+  }
+}

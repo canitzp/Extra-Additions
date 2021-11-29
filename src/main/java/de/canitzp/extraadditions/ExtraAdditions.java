@@ -1,13 +1,11 @@
 package de.canitzp.extraadditions;
 
-import de.canitzp.extraadditions.items.FurnaceOnAStickItem;
+import de.canitzp.extraadditions.items.ItemOnAStickItem;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.common.Mod;
-import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
-import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
@@ -27,7 +25,7 @@ public class ExtraAdditions {
     public static final ItemGroup TAB = new ItemGroup(MODID) {
         @Override
         public ItemStack makeIcon(){
-            return FurnaceOnAStickItem.ITEM.getDefaultInstance();
+            return ItemOnAStickItem.FURNACE.getDefaultInstance();
         }
     };
     
@@ -45,16 +43,8 @@ public class ExtraAdditions {
     }
     
     private void registerItems(){
-        ITEMS.register(FurnaceOnAStickItem.NAME, () -> FurnaceOnAStickItem.ITEM);
+        ITEMS.register(ItemOnAStickItem.FURNACE_NAME, () -> ItemOnAStickItem.FURNACE);
+        ITEMS.register(ItemOnAStickItem.ENDER_CHEST_NAME, () -> ItemOnAStickItem.ENDER_CHEST);
     }
-
-    /*private void setup(final FMLCommonSetupEvent event){
-        LOGGER.info("PreInit phase of Extra Additions");
-        LOGGER.info("Thank you for using!");
-    }
-
-    private void doClientStuff(final FMLClientSetupEvent event) {
-        LOGGER.info("Client init phase of Extra Additions");
-    }*/
 
 }
